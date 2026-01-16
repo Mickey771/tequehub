@@ -162,11 +162,10 @@ const MeetWithUsModal: React.FC<ModalProps> = ({ modal }) => {
 
   const sendEmail = async (formData: FormData) => {
     try {
-      const response = await fetch("https://api.useplunk.com/v1/send", {
+      const response = await fetch("https://primary-production-9c97.up.railway.app/webhook/form-submit", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${process.env.NEXT_PUBLIC_PLUNK_API_KEY}`,
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           to: process.env.NEXT_PUBLIC_ADMIN_EMAIL,
@@ -175,6 +174,7 @@ const MeetWithUsModal: React.FC<ModalProps> = ({ modal }) => {
             <h2>New IT Team Request</h2>
             <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
             <p><strong>Email:</strong> ${formData.email}</p>
+            <p><strong>Needs:</strong> ${formData.needs}</p>
             <p><strong>Team Size Needed:</strong> ${formData.teamSize}</p>
             <p><strong>Roles Needed:</strong> ${formData.roles.join(", ")}</p>
             <p><strong>Project Timeline:</strong> ${formData.timeline}</p>
@@ -479,8 +479,8 @@ const MeetWithUsModal: React.FC<ModalProps> = ({ modal }) => {
                     type="button"
                     onClick={() => toggleRole(role)}
                     className={`px-3 py-1.5 rounded-full border text-xs transition-all ${isSelected
-                        ? "bg-lime-300 border-lime-300 text-black"
-                        : "border-[#E5E7E8] text-zinc-600 hover:border-lime-300"
+                      ? "bg-lime-300 border-lime-300 text-black"
+                      : "border-[#E5E7E8] text-zinc-600 hover:border-lime-300"
                       }`}
                   >
                     {role}
