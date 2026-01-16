@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import MainLayout from "../components/MainLayout";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Teque",
@@ -34,6 +35,90 @@ export default function RootLayout({
 
         {/* Optional: Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "TEQUE HUB, CORP.",
+              alternateName: "Teque Hub",
+              url: "https://www.teque.tech",
+              logo: "https://www.teque.tech/logo.png",
+              foundingDate: "2026-01-14",
+              priceRange: "$$$",
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: "221 W 9th St",
+                addressLocality: "Wilmington",
+                addressRegion: "DE",
+                postalCode: "19801",
+                addressCountry: "US",
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "sales",
+                email: "hello@teque.tech",
+                areaServed: ["US", "GB", "CA", "EU"],
+                availableLanguage: ["English"],
+              },
+              founder: {
+                "@type": "Person",
+                name: "Favour Etuneoke",
+                jobTitle: "CEO",
+                sameAs: ["https://www.linkedin.com/in/favour-etunwoke"],
+              },
+              sameAs: [
+                "https://www.linkedin.com/company/tequehub",
+                "https://clutch.co/profile/teque-hub",
+                "https://www.crunchbase.com/organization/teque-hub",
+                "https://github.com/tequehub",
+                "https://twitter.com/tequehub",
+              ],
+              knowsAbout: [
+                "Software Engineering",
+                "Flutter Development",
+                "Native Mobile Development",
+                "Google Cloud Platform",
+                "Business Automation",
+                "n8n",
+                "Artificial Intelligence",
+              ],
+              hasOfferCatalog: {
+                "@type": "OfferCatalog",
+                name: "Software Development Services",
+                itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name:
+                        "Cross-Platform Mobile App Development (Flutter/React Native)",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "Native iOS & Android Development (Swift/Kotlin)",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Service",
+                      name: "AI & Business Automation (n8n, Python, LLMs)",
+                    },
+                  },
+                ],
+              },
+              description:
+                "Teque Hub is a US-based software engineering firm serving global clients in the US, UK, and Europe. We specialize in Native and Cross-Platform mobile development, AI integration, and business automation.",
+            }),
+          }}
+        />
       </head>
       <body>
         <MainLayout>{children}</MainLayout>
