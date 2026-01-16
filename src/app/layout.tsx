@@ -60,8 +60,8 @@ export default function RootLayout({
               contactPoint: {
                 "@type": "ContactPoint",
                 contactType: "sales",
-                email: "hello@teque.tech",
-                areaServed: ["US", "GB", "CA", "EU"],
+                email: "info@teque.tech",
+                areaServed: ["US", "GB", "CA", "EU", "UAE", "FA"],
                 availableLanguage: ["English"],
               },
               founder: {
@@ -85,6 +85,8 @@ export default function RootLayout({
                 "Business Automation",
                 "n8n",
                 "Artificial Intelligence",
+                "AI-Agents",
+                "Devops",
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
@@ -94,8 +96,7 @@ export default function RootLayout({
                     "@type": "Offer",
                     itemOffered: {
                       "@type": "Service",
-                      name:
-                        "Cross-Platform Mobile App Development (Flutter/React Native)",
+                      name: "Cross-Platform Mobile App Development (Flutter/React Native)",
                     },
                   },
                   {
