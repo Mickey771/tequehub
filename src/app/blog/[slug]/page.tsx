@@ -7,7 +7,7 @@ import { FaFacebook, FaTwitter, FaLinkedin, FaLink } from "react-icons/fa";
 import BackButton from "@/components/Common/BackButton";
 import { Metadata } from "next";
 
-export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
     const { slug } = await params;
     const post = blogPosts.find((p) => p.slug === slug);
 
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: any }): Promise<Met
     }
 }
 
-const SingleBlogPage = async ({ params }: { params: any }) => {
+const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = await params;
     const post = blogPosts.find((p) => p.slug === slug);
     const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3); // Show 3 related posts
