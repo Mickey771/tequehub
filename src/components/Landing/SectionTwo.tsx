@@ -8,11 +8,9 @@ const SectionTwo = () => {
     <section className="w-full max-w-max mx-auto px-6 xl:px-0 pb-24">
       <div className="flex flex-wrap gap-10">
         <div className="bg-[#000000] min-h-[307px] flex flex-col justify-between w-full max-w-[760px] py-[48px] px-8 sm:px-10 md:px-12 lg:px-14 rounded-[22px] shadow-[0px_13px_100px_0px_rgba(199,199,199,0.25)] pop-hover">
-          <h1 className="lg:w-[634px] text-white text-3xl md:text-4xl lg:text-5xl font-semibold font-['Sora'] leading-[64px]">
-            IT Company that handles
-            <br />
-            everything.
-          </h1>
+          <h2 className="lg:w-[634px] text-white text-3xl md:text-4xl lg:text-5xl font-semibold font-['Sora'] leading-[64px]">
+            Full-Stack Software Engineering & AI Solutions
+          </h2>
           <Link href="/meet-with-us">
             <button className="h-[72px] mt-10 pl-12 pr-8 py-5 w-fit bg-[#caef45] rounded-[36px] justify-start items-center gap-[0px] inline-flex pop-hover-btn">
               <span className="w-[159px] text-black text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
@@ -25,25 +23,25 @@ const SectionTwo = () => {
           </Link>
         </div>
         <ItemCard
-          text="We provide the best designs both in its outlook and user experience for your projects."
+          text="User centered design systems that convert visitors into customers. We craft intuitive interfaces backed by behavioral psychology and A/B testing."
           heading="UI/UX Design"
           icon="uiuxbig"
         />
       </div>
       <div className="flex flex-wrap gap-10 mt-10">
         <ItemCard
-          text="We help to build your websites and applications the best possible way & we engineer all your bugs"
+          text="Scalable web applications built with Next.js, React, and Node.js. We architect systems that handle millions of users without breaking."
           heading="Web Development"
           icon="webbig"
         />
         <ItemCard
-          text="We give advice from our pool of experienced and brilliant IT personnel on IT issues"
+          text="Strategic technology consulting from senior engineers. We optimize your stack and build roadmaps aligned with business goals."
           heading="IT Consultancy"
           icon="itbig"
         />
         <ItemCard
-          text="We build intelligent AI agents and automate complex workflows to skyrocket your efficiency."
-          heading="Artificial Intelligence"
+          text="Custom AI agents and workflow automation using n8n and GPT-4. Reduce manual work by 80% and scale without hiring."
+          heading="AI & Automation"
           icon="graphicsbig"
         />
       </div>

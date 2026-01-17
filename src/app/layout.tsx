@@ -25,7 +25,11 @@ export const metadata: Metadata = {
     "Next.js Developers",
     "Delaware Software Company",
     "Workflow Automation",
-    "React Native"
+    "React Native",
+    "DevOps",
+    "Cloud Computing",
+    "Cybersecurity",
+    "Cloud Services"
   ],
   authors: [{ name: "Teque Hub", url: "https://www.teque.tech" }],
   creator: "Teque Hub",
@@ -36,7 +40,7 @@ export const metadata: Metadata = {
     siteName: "Teque Hub",
     title: "Teque | Premium Software Engineering & Automation",
     description:
-      "We build high-performance mobile apps and automate complex business workflows for global clients.",
+      "We build high performance mobile apps and automate complex business workflows for global clients.",
     images: [
       {
         url: "/logo.jpg",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Teque | Premium Software Engineering & Automation",
     description:
-      "We build high-performance mobile apps and automate complex business workflows for global clients.",
+      "We build high performance mobile apps and automate complex business workflows for global clients.",
     images: ["/logo.jpg"],
     creator: "@tequehub",
   },

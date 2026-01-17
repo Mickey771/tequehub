@@ -91,25 +91,22 @@ const Banner = () => {
             alt="banner"
           />
           <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-470px] top-0 leading-tight">
-            We offer the best creative
+            Software Development
           </h1>
           <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-350px] top-[15%] leading-tight">
-            solutions for you
+            & AI Automation
           </h1>
         </div>
         <div className="lg:pt-[200px]">
           <h1 className="lg:hidden zr:flex text-[32px] sm:text-[40px]  md:text-[50px] lg:text-[64px] font-semibold font-['Poppins']">
-            We offer the best creative solutions for you through Tech.
-          </h1>
-          <h1 className="zr:hidden lg:flex text-[#161616] pl-4 text-[64px] font-semibold font-['Poppins']">
-            through Tech.
+            Software Development & AI Automation
           </h1>
           <p className="text-[#333333] lg:pl-4 mt-7 md:mt-10 text-base md:text-lg font-normal font-['Poppins']">
-            We help bring your mind to life by providing you
+            We build high performance mobile apps, web applications, automate
             <br />
-            with our best technology services. We help create
+            complex workflows, and integrate AI agents to transform your business.
             <br />
-            the solution to your innovative idea with Tech.
+            Trusted by startups and enterprises across US, UK, and Middle East.
           </p>
           <div className="mt-[56px] flex gap-10">
             <Link href="/services">

@@ -6,12 +6,11 @@ import { GoArrowUpRight } from "react-icons/go";
 const SectionFour = () => {
   return (
     <section className="mt-24 px-6 lg:px-0 pb-24 w-full max-w-max mx-auto flex flex-col items-center">
-      <h1 className="text-center text-[#333333] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Sora'] leading-[64px]">
-        Products we have built
-      </h1>
+      <h2 className="text-center text-[#333333] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Sora'] leading-[64px]">
+        Proven Results for Global Clients
+      </h2>
       <p className="text-center text-[#333333] text-base max-w-[286px] md:max-w-[632px] md:text-lg font-normal font-['Poppins'] leading-tight">
-        We are responsible to creating some amazing products for our clients in
-        various parts of the world.
+        From fintech platforms to health & fitness apps, we've delivered production-ready solutions trusted by thousands of users.
       </p>
 
       <div className="mt-11 overflow-x-scroll  w-full flex gap-3 pb-8">
@@ -28,8 +27,7 @@ const SectionFour = () => {
           </span>
 
           <p className="w-[243px] md:w-[350px] lg:w-[530px] mt-5 mb-11 text-white text-base font-normal font-['Inter'] leading-7">
-            Website and Mobile aplication for gaining coins through exercise for
-            purchasing goods and services. US based Company
+            Mobile fitness app that rewards users with cryptocurrency for exercise. Built with Flutter for iOS/Android, integrated with blockchain APIs, and scaled to 50K+ active users.
           </p>
 
           <span className="inline-flex w-full max-w-[530px]">
@@ -56,8 +54,7 @@ const SectionFour = () => {
           </span>
 
           <p className="w-[243px] md:w-[350px] lg:w-[530px] mt-5 mb-11 text-white text-base font-normal font-['Inter'] leading-7">
-            Web and Mobile application for online financial trading and tracking
-            in Forex, Stocks, Shares, Futures, Bonds and so on.
+            Real-time trading platform for forex, stocks, and futures. Built with Flutter and Node.js, featuring live market data, advanced charting, and secure payment processing.
           </p>
 
           <span className="inline-flex w-full max-w-[664px]">

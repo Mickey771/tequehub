@@ -89,7 +89,7 @@ export const teamMembers: TeamMember[] = [
         role: "Lead Mobile Engineer",
         image: "/images/toni.jpg",
         description:
-            "Jesutoni acts as the Lead Mobile Engineer, focusing on building high-performance mobile applications. His expertise spans across iOS and Android platforms, delivering smooth and responsive mobile experiences.",
+            "Jesutoni acts as the Lead Mobile Engineer, focusing on building high performance mobile applications. His expertise spans across iOS and Android platforms, delivering smooth and responsive mobile experiences.",
         skills: [
             { name: "Flutter", icon: SiFlutter },
             { name: "Swift", icon: SiSwift },

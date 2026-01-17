@@ -2,6 +2,9 @@ import React from "react";
 import { servicesData } from "@/components/Services/data";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
+import { generateMetadata as genMeta } from "@/lib/metadata";
+import { generateServiceSchema } from "@/lib/schemas";
+import Script from "next/script";
 
 interface Props {
     params: Promise<{

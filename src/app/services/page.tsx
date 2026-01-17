@@ -1,6 +1,13 @@
 import React from "react";
 import ServiceCard from "@/components/Services/ServiceCard";
 import { servicesData } from "@/components/Services/data";
+import { generateMetadata as genMeta } from "@/lib/metadata";
+
+export const metadata = genMeta({
+    title: "Software Development Services | Teque Hub",
+    description: "Full-stack software engineering, AI automation, mobile app development, and IT consulting services. We build scalable solutions for startups and enterprises.",
+    path: "/services",
+});
 
 const ServicesPage = () => {
     return (
