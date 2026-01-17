@@ -27,7 +27,7 @@ const ServicesPage = () => {
                             key={index}
                             title={service.title}
                             description={service.description}
-                            icon={service.icon}
+                            icon={<service.icon />}
                         />
                     ))}
                 </div>
