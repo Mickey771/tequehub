@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     text: "Team",
-    path: "/employees",
+    path: "/team",
   },
   {
     text: "Case Study",

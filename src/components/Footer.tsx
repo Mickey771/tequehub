@@ -42,21 +42,21 @@ const Footer = () => {
             </span>
           </div>
         </div>
-        {/* <div className="flex flex-col gap-2 md:gap-4 lg:gap-8">
+        <div className="flex flex-col gap-2 md:gap-4 lg:gap-8">
           <h2 className="text-white text-3xl font-medium font-['Clash Display'] leading-9">
-            Address
+            US Headquarters
           </h2>
           <p className="w-[233px] text-white text-sm sm:text-base md:text-[20px] lg:text-[22px] font-['Aeonik'] leading-[30px]">
-            REMOTE
+            221 W 9th St Wilmington, DE 19801 United States
           </p>
-        </div> */}
+        </div>
         <div className="flex flex-col gap-2 md:gap-4 lg:gap-8">
           <h2 className="text-white text-3xl font-medium font-['Clash Display'] leading-9">
             Contact Us
           </h2>
-          <p className="text-white text-sm sm:text-base md:text-[20px] lg:text-[22px] font-['Aeonik'] leading-[30px] lg:leading-[60px]">
+          <a href="mailto:info@teque.tech" className="text-white text-sm sm:text-base md:text-[20px] lg:text-[22px] font-['Aeonik'] leading-[30px] lg:leading-[60px] hover:text-[#caef45] transition-colors">
             info@teque.tech
-          </p>
+          </a>
         </div>
         <div className="flex flex-col gap-2 md:gap-4 lg:gap-8">
           <h2 className="text-white text-3xl font-medium font-['Clash Display'] leading-9">
