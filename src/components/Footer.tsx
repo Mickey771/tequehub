@@ -1,5 +1,6 @@
 import React from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 import TypingText from "./TypingText";
 
 const Footer = () => {
@@ -63,11 +64,11 @@ const Footer = () => {
             Our Policies
           </h2>
           <p className="text-white text-sm sm:text-base md:text-[20px] lg:text-[22px] font-['Aeonik'] leading-[60px]">
-            Privacy Policies
+            <Link href="/privacy-policy" className="hover:text-[#caef45] transition-colors">Privacy Policy</Link>
             <br />
-            Terms of use
+            <Link href="/refund-policy" className="hover:text-[#caef45] transition-colors">Refund Policy</Link>
             <br />
-            Refund Policy
+            <Link href="/faq" className="hover:text-[#caef45] transition-colors">FAQ</Link>
           </p>
         </div>
       </div>

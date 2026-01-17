@@ -1,17 +1,50 @@
-"use client";
 import React from "react";
 import Image from "next/image";
-import { useParams, useRouter } from "next/navigation";
-import { blogPosts, BlogPost } from "@/components/Blog/data";
+import { blogPosts } from "@/components/Blog/data";
 import RelatedPosts from "@/components/Blog/RelatedPosts";
-import { GoArrowLeft, GoClock } from "react-icons/go";
+import { GoClock } from "react-icons/go";
 import { FaFacebook, FaTwitter, FaLinkedin, FaLink } from "react-icons/fa";
+import BackButton from "@/components/Common/BackButton";
+import { Metadata } from "next";
 
-const SingleBlogPage = () => {
-    const params = useParams();
-    const router = useRouter();
-    const slug = params.slug as string;
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+    const post = blogPosts.find((p) => p.slug === params.slug);
 
+    if (!post) {
+        return {
+            title: 'Post Not Found',
+        }
+    }
+
+    return {
+        title: post.title,
+        description: post.excerpt,
+        openGraph: {
+            title: post.title,
+            description: post.excerpt,
+            type: 'article',
+            publishedTime: post.date,
+            authors: [post.author],
+            images: [
+                {
+                    url: post.image,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                }
+            ]
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.title,
+            description: post.excerpt,
+            images: [post.image],
+        }
+    }
+}
+
+const SingleBlogPage = ({ params }: { params: { slug: string } }) => {
+    const slug = params.slug;
     const post = blogPosts.find((p) => p.slug === slug);
     const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3); // Show 3 related posts
 
@@ -28,13 +61,7 @@ const SingleBlogPage = () => {
             <div className="max-w-[1300px] mx-auto">
 
                 {/* Back Button */}
-                <button
-                    onClick={() => router.back()}
-                    className="flex items-center gap-2 text-[#1b1d20]/70 hover:text-[#caef45] transition-colors mb-8 font-['Sora']"
-                >
-                    <GoArrowLeft className="text-xl" />
-                    <span>Back to Blog</span>
-                </button>
+                <BackButton />
 
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20">
                     {/* Main Content */}
