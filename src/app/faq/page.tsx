@@ -4,7 +4,7 @@ import Accordion from "@/components/Common/Accordion";
 
 const FAQPage = () => {
     return (
-        <div className="min-h-screen bg-white pt-32 pb-20 px-6">
+        <div className="min-h-screen bg-white pt-10 pb-20 px-6">
             <div className="max-w-[1300px] mx-auto">
                 <div className="flex flex-col items-center text-center mb-16">
                     <script

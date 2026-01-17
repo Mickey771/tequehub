@@ -112,7 +112,7 @@ const Banner = () => {
             the solution to your innovative idea with Tech.
           </p>
           <div className="mt-[56px] flex gap-10">
-            <Link href="/team">
+            <Link href="/services">
               <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#e6e5e5] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
                 <span className="text-center text-[#161616] text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
                   Learn more

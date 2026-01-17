@@ -58,7 +58,7 @@ const SingleBlogPage = async ({ params }: { params: Promise<{ slug: string }> })
     }
 
     return (
-        <div className="min-h-screen bg-white pt-28 pb-20 px-6">
+        <div className="min-h-screen bg-white pt-10 pb-20 px-6">
             <div className="max-w-[1300px] mx-auto">
 
                 {/* Back Button */}
