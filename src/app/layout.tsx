@@ -6,8 +6,8 @@ import Script from "next/script";
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.teque.tech"),
   title: {
-    default: "Teque | Premium Software Engineering & Automation",
-    template: "%s | Teque",
+    default: "Teque Hub | Custom Software Development & AI Automation Agency",
+    template: "%s | Teque Hub",
   },
   description:
     "Teque Hub is a premier software engineering firm specializing in Cross-Platform Mobile Development, Business Automation, and AI Integration.",
@@ -20,6 +20,12 @@ export const metadata: Metadata = {
     "Mobile App Development",
     "Web Development",
     "Teque Hub",
+    "Custom Software",
+    "AI Agents",
+    "Next.js Developers",
+    "Delaware Software Company",
+    "Workflow Automation",
+    "React Native"
   ],
   authors: [{ name: "Teque Hub", url: "https://www.teque.tech" }],
   creator: "Teque Hub",
@@ -61,6 +67,23 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Teque Hub",
+  url: "https://www.teque.tech",
+  logo: "https://www.teque.tech/logo.jpg",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer support",
+    email: "contact@teque.tech"
+  },
+  sameAs: [
+    "https://twitter.com/tequehub",
+    "https://linkedin.com/company/tequehub"
+  ]
+};
+
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 export default function RootLayout({
@@ -76,6 +99,11 @@ export default function RootLayout({
       </head>
       <body>
         <GoogleAnalytics />
+        <Script
+          id="json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <MainLayout>{children}</MainLayout>
       </body>
     </html>

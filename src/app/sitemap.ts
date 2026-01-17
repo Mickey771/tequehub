@@ -1,5 +1,7 @@
 import { MetadataRoute } from 'next'
 import { blogPosts } from '@/components/Blog/data'
+import { servicesData } from '@/components/Services/data';
+import { caseStudies } from '@/components/CaseStudy/data';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.teque.tech'
@@ -9,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/blog',
         '/blog/catalogue',
+        '/about',
         '/team',
         '/case-study',
         '/meet-with-us',
@@ -30,5 +33,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.7,
     }))
 
-    return [...routes, ...posts]
+    // Services
+    const servicePages = servicesData.map((service) => ({
+        url: `${baseUrl}/services/${service.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.8,
+    }))
+
+    // Case Studies
+    const caseStudyPages = caseStudies.map((study) => ({
+        url: `${baseUrl}/case-study/${study.id}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly' as const,
+        priority: 0.7,
+    }))
+
+    return [...routes, ...posts, ...servicePages, ...caseStudyPages]
 }

@@ -1,0 +1,27 @@
+# Teque Hub - AI & Software Engineering Agency
+
+## About
+Teque Hub is a premier software engineering firm specializing in:
+- Cross-Platform Mobile Development (Flutter, React Native)
+- Business Automation (n8n, Zapier, Custom Workflows)
+- AI Integration & AI Agents
+- Web Development (Next.js, React, Node.js)
+
+We help businesses automate workflows, build custom software, and integrate AI to improve efficiency.
+
+## Core Services
+- **Mobile Development**: High-performance iOS and Android apps.
+- **Web Development**: Scalable, modern web applications.
+- **AI & Automation**: Custom AI agents, workflow automation, and LLM integration.
+- **App Maintenance**: Long-term support and updates.
+
+## Navigation
+- /services: Detailed list of our engineering and automation services.
+- /case-study: Real-world examples of our work (Vapzer, Hunter, URunner).
+- /blog: Technical insights and updates.
+- /meet-with-us: Schedule a consultation.
+- /team: Meet our experts.
+
+## Contact
+Email: contact@teque.tech
+Website: https://www.teque.tech
