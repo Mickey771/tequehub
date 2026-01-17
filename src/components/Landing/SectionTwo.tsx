@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 import ItemCard from "./ItemCard";
 
@@ -12,14 +13,16 @@ const SectionTwo = () => {
             <br />
             everything.
           </h1>
-          <button className="h-[72px] mt-10 pl-12 pr-8 py-5 w-fit bg-[#caef45] rounded-[36px] justify-start items-center gap-[0px] inline-flex pop-hover-btn">
-            <span className="w-[159px] text-black text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
-              Work with Us
-            </span>
-            <span>
-              <GoArrowUpRight size={22} />
-            </span>
-          </button>
+          <Link href="/meet-with-us">
+            <button className="h-[72px] mt-10 pl-12 pr-8 py-5 w-fit bg-[#caef45] rounded-[36px] justify-start items-center gap-[0px] inline-flex pop-hover-btn">
+              <span className="w-[159px] text-black text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
+                Work with Us
+              </span>
+              <span>
+                <GoArrowUpRight size={22} />
+              </span>
+            </button>
+          </Link>
         </div>
         <ItemCard
           text="We provide the best designs both in its outlook and user experience for your projects."
@@ -39,8 +42,8 @@ const SectionTwo = () => {
           icon="itbig"
         />
         <ItemCard
-          text="We help design fliers, E-fliers, posters, billboards and brand identities for your products."
-          heading="Graphics Design"
+          text="We build intelligent AI agents and automate complex workflows to skyrocket your efficiency."
+          heading="Artificial Intelligence"
           icon="graphicsbig"
         />
       </div>

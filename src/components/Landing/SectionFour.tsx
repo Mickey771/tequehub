@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
 const SectionFour = () => {
@@ -102,14 +103,16 @@ const SectionFour = () => {
         </div>
       </div>
 
-      <button className="h-[72px] w-fit mt-10 pl-12 pr-8 py-5 bg-[#161616] rounded-[36px] justify-start items-center gap-[20px] inline-flex pop-hover-btn">
-        <span className=" text-white text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
-          Reach out to us
-        </span>
-        <span>
-          <GoArrowUpRight color="white" size={22} />
-        </span>
-      </button>
+      <Link href="/meet-with-us">
+        <button className="h-[72px] w-fit mt-10 pl-12 pr-8 py-5 bg-[#161616] rounded-[36px] justify-start items-center gap-[20px] inline-flex pop-hover-btn">
+          <span className=" text-white text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
+            Reach out to us
+          </span>
+          <span>
+            <GoArrowUpRight color="white" size={22} />
+          </span>
+        </button>
+      </Link>
     </section>
   );
 };

@@ -7,6 +7,49 @@ const FAQPage = () => {
         <div className="min-h-screen bg-white pt-32 pb-20 px-6">
             <div className="max-w-[1300px] mx-auto">
                 <div className="flex flex-col items-center text-center mb-16">
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{
+                            __html: JSON.stringify({
+                                "@context": "https://schema.org",
+                                "@type": "FAQPage",
+                                "mainEntity": [
+                                    {
+                                        "@type": "Question",
+                                        "name": "Where is Teque Hub located?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "Teque Hub is a US incorporated technology company (Delaware C Corporation). We operate as a distributed engineering firm with a global footprint, allowing us to serve clients across North America (US/Canada), the UK, and the Middle East (UAE/Saudi Arabia)."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What time zones do you support?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "We align with Eastern & Pacific Time (EST/PST) for North America, GMT/BST for UK & Europe, and GST for the Middle East."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "Who owns the code and Intellectual Property (IP)?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "You do. Once your project is delivered and the final invoice is paid, 100% of the Intellectual Property (IP), source code, and assets are legally transferred from Teque Hub Corp to your company."
+                                        }
+                                    },
+                                    {
+                                        "@type": "Question",
+                                        "name": "What is your primary tech stack?",
+                                        "acceptedAnswer": {
+                                            "@type": "Answer",
+                                            "text": "We specialize in Cross Platform Mobile development using Flutter and Workflow Automation using n8n."
+                                        }
+                                    }
+                                ]
+                            })
+                        }}
+                    />
                     <h1 className="text-[#1b1d20] text-4xl md:text-5xl font-bold font-['Clash Display'] mb-4">
                         Frequently Asked Questions
                     </h1>

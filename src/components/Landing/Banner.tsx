@@ -1,6 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { GiArtificialIntelligence } from "react-icons/gi";
 
 const categories = [
@@ -9,12 +10,20 @@ const categories = [
     icon: <GiArtificialIntelligence />,
   },
   {
-    name: "Data Analysis",
+    name: "Artificial Intelligence",
+    icon: <GiArtificialIntelligence />,
+  },
+  {
+    name: "AI Agents",
+    icon: <GiArtificialIntelligence />,
+  },
+  {
+    name: "Workflow Automation",
     img: "/logos/data.svg",
   },
   {
-    name: "Graphics Design",
-    img: "/logos/graphics.svg",
+    name: "Data Analysis",
+    img: "/logos/data.svg",
   },
   {
     name: "UI/UX Design",
@@ -81,12 +90,12 @@ const Banner = () => {
             className="w-full max-w-[783px]"
             alt="banner"
           />
-          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-470px] top-0">
+          <h2 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-470px] top-0">
             we offer the best creative
-          </h1>
-          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-350px] top-[15%]">
+          </h2>
+          <h2 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-350px] top-[15%]">
             solution for you
-          </h1>
+          </h2>
         </div>
         <div className="lg:pt-[200px]">
           <h1 className="lg:hidden zr:flex text-[32px] sm:text-[40px]  md:text-[50px] lg:text-[64px] font-semibold font-['Poppins']">
@@ -103,16 +112,20 @@ const Banner = () => {
             the solution to your innovative idea with Tech.
           </p>
           <div className="mt-[56px] flex gap-10">
-            <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#e6e5e5] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
-              <span className="text-center text-[#161616] text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
-                Learn more
-              </span>
-            </button>
-            <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#161616] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
-              <span className="text-center text-white text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
-                Meet with Us
-              </span>
-            </button>
+            <Link href="/team">
+              <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#e6e5e5] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
+                <span className="text-center text-[#161616] text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
+                  Learn more
+                </span>
+              </button>
+            </Link>
+            <Link href="/meet-with-us">
+              <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#161616] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
+                <span className="text-center text-white text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
+                  Meet with Us
+                </span>
+              </button>
+            </Link>
           </div>
         </div>
       </div>

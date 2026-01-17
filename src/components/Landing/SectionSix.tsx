@@ -83,14 +83,16 @@ const SectionSix = () => {
           </div>
         </div>
       </div>
-      <button className="h-[72px] w-fit mt-10 pl-12 pr-8 py-5 bg-[#161616] rounded-[36px] justify-start items-center gap-[20px] inline-flex pop-hover-btn">
-        <span className=" text-white text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
-          Join our team
-        </span>
-        <span>
-          <GoArrowUpRight color="white" size={22} />
-        </span>
-      </button>
+      <a href="mailto:careers@teque.tech">
+        <button className="h-[72px] w-fit mt-10 pl-12 pr-8 py-5 bg-[#161616] rounded-[36px] justify-start items-center gap-[20px] inline-flex pop-hover-btn">
+          <span className=" text-white text-base font-normal font-['Inter'] uppercase leading-loose tracking-wider">
+            Join our team
+          </span>
+          <span>
+            <GoArrowUpRight color="white" size={22} />
+          </span>
+        </button>
+      </a>
     </section>
   );
 };
