@@ -7,10 +7,10 @@ const SectionFour = () => {
   return (
     <section className="mt-24 px-6 lg:px-0 pb-24 w-full max-w-max mx-auto flex flex-col items-center">
       <h2 className="text-center text-[#333333] text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-['Sora'] leading-[64px]">
-        Proven Results for Global Clients
+        Production Deployments, Real Results
       </h2>
       <p className="text-center text-[#333333] text-base max-w-[286px] md:max-w-[632px] md:text-lg font-normal font-['Poppins'] leading-tight">
-        From fintech platforms to health & fitness apps, we've delivered production-ready solutions trusted by thousands of users.
+        Security audited platforms processing millions in daily transactions. Built for startups and enterprises that need systems that scale under real world load.
       </p>
 
       <div className="mt-11 overflow-x-scroll  w-full flex gap-3 pb-8">

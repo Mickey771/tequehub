@@ -51,6 +51,7 @@ const Navbar = () => {
             <Link
               key={index}
               href={item.path}
+              onClick={() => setIsMenu(false)}
               className="text-[#212121] hover:border-b-2 border-[#212121] text-[18px] font-poppins font-medium"
             >
               {item.text}
@@ -59,14 +60,14 @@ const Navbar = () => {
         </div>
         <div className="flex items-center gap-4 md:gap-8 lg:gap-10">
           <Link href="/team">
-            <button className="zr:hidden mb:flex items-center justify-center w-[120px] sm:w-[150px] md:w-[200px] lg:w-[223px] h-[40px] md:h-[50px] lg:h-[60px] bg-[#E7E6E6] rounded-[8px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
+            <button onClick={() => setIsMenu(false)} className="zr:hidden mb:flex items-center justify-center w-[120px] sm:w-[150px] md:w-[200px] lg:w-[223px] h-[40px] md:h-[50px] lg:h-[60px] bg-[#E7E6E6] rounded-[8px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
               <span className="text-center text-[#161616] text-sm sm:text-base md:text-[18px] lg:text-[20px] font-poppins font-[600]">
                 Join Us
               </span>
             </button>
           </Link>
           <Link href={"/meet-with-us"}>
-            <button className="zr:hidden mb:flex items-center justify-center w-[120px] sm:w-[150px] md:w-[200px] lg:w-[223px]  h-[40px] md:h-[50px] lg:h-[60px] border border-[#161616] text-[#ffffff] hover:bg-white hover:text-[#161616] bg-[#161616] rounded-[8px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
+            <button onClick={() => setIsMenu(false)} className="zr:hidden mb:flex items-center justify-center w-[120px] sm:w-[150px] md:w-[200px] lg:w-[223px]  h-[40px] md:h-[50px] lg:h-[60px] border border-[#161616] text-[#ffffff] hover:bg-white hover:text-[#161616] bg-[#161616] rounded-[8px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
               <span className="text-center  text-sm sm:text-base md:text-[18px] lg:text-[20px] font-poppins font-[600]">
                 Meet with Us
               </span>

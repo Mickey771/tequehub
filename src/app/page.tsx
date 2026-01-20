@@ -3,8 +3,8 @@ import Image from "next/image";
 import { generateMetadata as genMeta } from "@/lib/metadata";
 
 export const metadata = genMeta({
-  title: "Teque Hub | Custom Software Development & AI Automation Agency",
-  description: "We build high performance mobile apps, web applications, automate complex workflows, and integrate AI agents. Trusted by startups and enterprises across US, UK, and Middle East.",
+  title: "Teque Hub | Production Ready Software, AI & Fintech Systems",
+  description: "We build production ready mobile apps, web applications, and fintech platforms processing $2M+ daily volume. Security audited, scalable systems for startups and enterprises across US, UK, and Middle East.",
   path: "/",
 });
 

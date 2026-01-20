@@ -9,7 +9,7 @@ const SectionTwo = () => {
       <div className="flex flex-wrap gap-10">
         <div className="bg-[#000000] min-h-[307px] flex flex-col justify-between w-full max-w-[760px] py-[48px] px-8 sm:px-10 md:px-12 lg:px-14 rounded-[22px] shadow-[0px_13px_100px_0px_rgba(199,199,199,0.25)] pop-hover">
           <h2 className="lg:w-[634px] text-white text-3xl md:text-4xl lg:text-5xl font-semibold font-['Sora'] leading-[64px]">
-            Full-Stack Software Engineering & AI Solutions
+            Production Ready Systems, Not Experiments
           </h2>
           <Link href="/meet-with-us">
             <button className="h-[72px] mt-10 pl-12 pr-8 py-5 w-fit bg-[#caef45] rounded-[36px] justify-start items-center gap-[0px] inline-flex pop-hover-btn">
@@ -23,24 +23,24 @@ const SectionTwo = () => {
           </Link>
         </div>
         <ItemCard
-          text="User centered design systems that convert visitors into customers. We craft intuitive interfaces backed by behavioral psychology and A/B testing."
-          heading="UI/UX Design"
+          text="Cross platform mobile apps built with Flutter and React Native. Deployed to production with 50K+ active users, handling real revenue and real transactions."
+          heading="Mobile Development"
           icon="uiuxbig"
         />
       </div>
       <div className="flex flex-wrap gap-10 mt-10">
         <ItemCard
-          text="Scalable web applications built with Next.js, React, and Node.js. We architect systems that handle millions of users without breaking."
-          heading="Web Development"
+          text="Scalable web applications using Next.js, React, and Node.js. Built to handle millions of requests per day with 99.9% uptime guarantees."
+          heading="Web Applications"
           icon="webbig"
         />
         <ItemCard
-          text="Strategic technology consulting from senior engineers. We optimize your stack and build roadmaps aligned with business goals."
-          heading="IT Consultancy"
+          text="Fintech platforms, DeFi protocols, and trading systems. Security audited code that processes $2M+ in daily volume with real time settlement."
+          heading="Fintech & Web3"
           icon="itbig"
         />
         <ItemCard
-          text="Custom AI agents and workflow automation using n8n and GPT-4. Reduce manual work by 80% and scale without hiring."
+          text="AI agents, workflow automation, and intelligent systems using GPT-4, LangChain, and n8n. Reduce operational costs by 80% while scaling capacity."
           heading="AI & Automation"
           icon="graphicsbig"
         />

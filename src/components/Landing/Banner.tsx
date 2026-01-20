@@ -3,6 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { GiArtificialIntelligence } from "react-icons/gi";
+import { GoArrowUpRight } from "react-icons/go";
 
 const categories = [
   {
@@ -38,6 +39,11 @@ const categories = [
 const Banner = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  // Counter animation state
+  const [platformCount, setPlatformCount] = useState(0);
+  const [volumeCount, setVolumeCount] = useState(0);
+  const [uptimeCount, setUptimeCount] = useState(0);
 
   useEffect(() => {
     let animationFrameId: number;
@@ -75,44 +81,116 @@ const Banner = () => {
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
+  // Counter animations
+  useEffect(() => {
+    const target = 15;
+    const duration = 2000;
+    const increment = target / (duration / 50);
+
+    const interval = setInterval(() => {
+      setPlatformCount(prev => {
+        const next = prev + increment;
+        return next >= target ? target : next;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const target = 2;
+    const duration = 2000;
+    const increment = target / (duration / 50);
+
+    const interval = setInterval(() => {
+      setVolumeCount(prev => {
+        const next = prev + increment;
+        return next >= target ? target : next;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const target = 99.9;
+    const duration = 2000;
+    const increment = target / (duration / 50);
+
+    const interval = setInterval(() => {
+      setUptimeCount(prev => {
+        const next = prev + increment;
+        return next >= target ? target : next;
+      });
+    }, 50);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const allCategories = [...categories, ...categories];
 
   return (
     <section className="pb-40 px-6 xl:px-0">
-      <div className="w-full max-w-max mx-auto mt-10 flex flex-col-reverse gap-10 lg:flex-row ">
-        <div className="relative w-full max-w-[783px] pop-hover">
+      <div className="w-full max-w-max mx-auto mt-10 flex flex-col gap-6 lg:flex-row ">
+        <div className="relative w-full max-w-[783px] pop-hover mr-8 lg:mr-12 mb-4 lg:mb-0">
           <Image
             src={"/images/banner.png"}
             width={0}
             height={0}
             sizes="100vw"
-            style={{ height: "100%", width: "100%" }}
-            className="w-full max-w-[783px]"
+            style={{ height: "auto", width: "100%" }}
+            className="w-full max-w-[783px] object-contain"
             alt="banner"
           />
-          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-470px] top-0 leading-tight">
-            Software Development
+          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-520px] top-0 leading-tight">
+            Production Ready Software
           </h1>
-          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-350px] top-[15%] leading-tight">
-            & AI Automation
+          <h1 className="zr:hidden lg:flex text-[#161616] text-[64px] font-semibold font-['Poppins'] absolute right-[-400px] top-[15%] leading-tight">
+            & AI Systems
           </h1>
         </div>
         <div className="lg:pt-[200px]">
-          <h1 className="lg:hidden zr:flex text-[32px] sm:text-[40px]  md:text-[50px] lg:text-[64px] font-semibold font-['Poppins']">
-            Software Development & AI Automation
+          <h1 className="lg:hidden zr:flex text-[32px] sm:text-[40px] md:text-[50px] lg:text-[64px] font-semibold font-['Poppins'] leading-tight">
+            Production Ready Software & AI Systems
           </h1>
-          <p className="text-[#333333] lg:pl-4 mt-7 md:mt-10 text-base md:text-lg font-normal font-['Poppins']">
-            We build high performance mobile apps, web applications, automate
-            <br />
-            complex workflows, and integrate AI agents to transform your business.
-            <br />
-            Trusted by startups and enterprises across US, UK, and Middle East.
+          <p className="text-[#666666] lg:pl-4 mt-4 text-base md:text-lg font-medium font-['Inter'] leading-relaxed">
+            Built to scale. Secure by design. Proven in production.
           </p>
-          <div className="mt-[56px] flex gap-10">
-            <Link href="/services">
+          <p className="text-[#333333] text-base md:text-lg font-normal font-['Poppins'] leading-relaxed">
+            We build mobile apps, web platforms, and AI systems, including
+            <br />
+            fintech platforms processing $2M+ daily. Secure, scalable,
+            <br />
+            production ready solutions for startups and enterprises.
+          </p>
+
+          {/* Trust Signal */}
+          <p className="text-[#666666] lg:pl-4 mt-4 text-sm font-medium font-['Inter'] uppercase tracking-wide">
+            Trusted by startups and enterprises across the US, UK, and Middle East
+          </p>
+
+          {/* Stats */}
+          <div className="lg:pl-4 mt-8 flex flex-wrap gap-6 md:gap-10">
+            <div className="flex flex-col">
+              <span className="text-[#161616] text-3xl md:text-4xl font-bold font-['Sora']">{Math.floor(platformCount)}+</span>
+              <span className="text-[#666666] text-sm font-normal font-['Inter'] mt-1">Platforms Launched</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[#161616] text-3xl md:text-4xl font-bold font-['Sora']">${Math.floor(volumeCount)}M+</span>
+              <span className="text-[#666666] text-sm font-normal font-['Inter'] mt-1">Daily Volume Processed</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="text-[#161616] text-3xl md:text-4xl font-bold font-['Sora']">{uptimeCount.toFixed(1)}%</span>
+              <span className="text-[#666666] text-sm font-normal font-['Inter'] mt-1">Platform Uptime</span>
+            </div>
+          </div>
+
+          {/* CTAs */}
+          <div className="mt-10 flex gap-6">
+            <Link href="/case-study">
               <button className="w-[150px] md:w-[200px] lg:w-[223px] h-[60px] bg-[#e6e5e5] rounded-[10px] md:rounded-[12px] lg:rounded-[15px] pop-hover-btn">
                 <span className="text-center text-[#161616] text-base md:text-lg lg:text-xl font-semibold font-['Poppins']">
-                  Learn more
+                  Case Studies
                 </span>
               </button>
             </Link>
